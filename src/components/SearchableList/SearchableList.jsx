@@ -10,7 +10,7 @@ const SearchableList = ({ items, children, itemKeyFn }) => {
     if (lastChange.current) {
       clearTimeout(lastChange.current);
     }
-
+    // debouncing implementations
     lastChange.current = setTimeout(() => {
       lastChange.current = null;
       setSearchTerm(e.target.value);
